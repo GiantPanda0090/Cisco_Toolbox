@@ -118,5 +118,6 @@ dmypy.json
 nxapi/src/config_test.py
 production.sh
 
-#gitlabinfo
+#idea
+.idea
 
