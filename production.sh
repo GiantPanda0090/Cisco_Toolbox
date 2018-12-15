@@ -7,7 +7,7 @@ cd ../Incu2019_github
 
 git add -A
 git commit -m $1
-git push github master
+git push -f github master
 
 cd ../Incu2019_gitlab
 
