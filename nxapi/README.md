@@ -13,87 +13,85 @@ main class for NX--API Toolbox
 Router object
 class Router(object):
 
-##demo
+\##demo <br />
 def main():
 
-##get the version of the hardware
+\##get the version of the hardware <br />
 def get_version():
 
 
-##get the model of the hardware
+\##get the model of the hardware <br />
 def get_plattform():
 
-##get the feedback of the 'show version'
+\##get the feedback of the 'show version' <br />
 def get_showversion():
 
 
-##configure the description of the interface
+\##configure the description of the interface <br />
 def configure_interface_desc(intf,descpt):
 
 
-##adapt all interface name
+\##adapt all interface name <br />
 def parse_if(interface):
 
 
-##get the status of the interface
+\##get the status of the interface <br />
 def get_interface_status(intf):
 
 
-##get the status per interface
+\##get the status per interface <br />
 def get_interface_state(interface):
 
 
-##parse the admin state
+\##parse the admin state <br />
 def get_interface_admin_state(row):
 
 
-##parse the link state
+\##parse the link state <br />
 def get_interface_link_state(row):
 
 
-##parse the proto state
+\##parse the proto state <br />
 def get_interface_proto_state(row):
 
-##parse the ip-disabled
+\##parse the ip-disabled <br />
 def get_interface_swtichport_stat(row):
 
 
-##parse the prefix
+\##parse the prefix <br />
 def get_interface_ip(row):
 
-##parse intf-name
+\##parse intf-name <br />
 def get_interface_name(row):
 
 
-##collect the feedback of 'show ip interface brief'
+\##collect the feedback of 'show ip interface brief' <br />
 def get_status():
 
 
 
-##encrypt text
+\##encrypt text <br />
 def encrypt(str):
 
 
-#decrypt cypher
+\##decrypt cypher <br />
 def decrypt(cipher):
 
 
-##initialization of the class
+\##initialization of the class <br />
 def init():
-
-
 def dynamic_auth():
 
 
-##authentication info import
+\##authentication info import <br />
 def authenticate(user,passw):
 
-##connection information import/json formate for hardware
+\##connection information import/json formate for hardware <br />
 def connect(ip_addr,ip_port):
 
 
-##get the hostname
+\##get the hostname <br />
 def hostname():
 
-##send command to the hardware
+\##send command to the hardware <br />
 def send_com(Command,type):
