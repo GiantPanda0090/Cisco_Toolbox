@@ -6,8 +6,10 @@ rm  ../Incu2019_github/production.sh
 cd ../Incu2019_github
 
 git add -A
+git rm -r --cached .idea
 git commit -m $1
 git push -f github master
+
 
 cd ../Incu2019_gitlab
 
