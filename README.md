@@ -1,9 +1,17 @@
-# **Nexus 9000v toolbox**
+# **Cisco Toolbox**
 The repository is aimed to build a toolbox for interating, analysitic and extract information from Cisco Nexus 9000v Switches.
+Each module has an demo() function to demostrate the usage of each function inside each module. 
 ##Structure
 .<br />
 ├── data_analyses<br />
 ├── flask_monodb<br />
+│   ├── address_book.py<br />
+│   ├── Mongo.docx<br />
+│   ├── Mongo-Troubleshooting_original.py<br />
+│   ├── Mongo-Troubleshooting.py<br />
+│   ├── README.md<br />
+│   ├── README.me<br />
+│   └── requirements.txt<br />
 ├── nxapi<br />
 │   ├── labs_byCiscoIncu2019.ipynb<br />
 │   ├── __pycache__<br />
@@ -31,4 +39,5 @@ The repository is aimed to build a toolbox for interating, analysitic and extrac
 ├── student_info.json<br />
 └── threads<br />
 
-10 directories, 18 files<br />
+10 directories, 27 files<br />
+
