@@ -119,5 +119,5 @@ nxapi/src/config_test.py
 production.sh
 
 #idea
-.idea
+.idea/*
 
