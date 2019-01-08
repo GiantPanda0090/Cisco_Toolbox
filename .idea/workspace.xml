@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="367f3920-847f-4dd6-b3d9-3cb08ae2d59a" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/flask_monodb/.~lock.Mongo.docx#" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/flask_monodb/Mongo-Troubleshooting.py" />
       <change beforePath="" afterPath="$PROJECT_DIR$/flask_monodb/Mongo-Troubleshooting_original.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/flask_monodb/Mongo.docx" />
       <change beforePath="" afterPath="$PROJECT_DIR$/flask_monodb/README.md" />
       <change beforePath="" afterPath="$PROJECT_DIR$/flask_monodb/README.me" />
       <change beforePath="" afterPath="$PROJECT_DIR$/flask_monodb/address_book.py" />
