@@ -126,7 +126,7 @@ def insert_new_entry(dict:dict):
     return id
 
 
-
+#display specific or all entries
 def display_entries(firstname=None,lastname=None):
     if firstname == None and lastname == None:
         result = collection.find().sort([("First Name",pymongo.ASCENDING),("Last Name",pymongo.ASCENDING)])
@@ -139,8 +139,12 @@ def display_entries(firstname=None,lastname=None):
             output.append(item)
     return output
 
+#delete specific or all entries
 def delete_entries(firstname=None,lastname=None):
-    result = collection.delete_many({"$and": [{"First Name": firstname},
+    if firstname ==None and lastname ==None:
+        collection.delete_many({})
+    else:
+        result = collection.delete_many({"$and": [{"First Name": firstname},
                                        {"Last Name": lastname}]})
     return result.deleted_count
 
