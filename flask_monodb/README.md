@@ -18,7 +18,7 @@ Run command: pip3 install -r requirments.txt
 Run command: python3 \<module name>.py
 
 
-## address_book.py
+## mongo.py
  Create/modify/query an address book in mongodb
 
 ##  Mongo-Troubleshooting.py
