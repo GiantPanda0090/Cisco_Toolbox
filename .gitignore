@@ -117,6 +117,7 @@ dmypy.json
 #production
 nxapi/src/config_test.py
 production.sh
+flask_monodb/flask_monodb_2/*
 
 #idea
 .idea/*

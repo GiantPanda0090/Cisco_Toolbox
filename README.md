@@ -5,13 +5,26 @@ Each module has an demo() function to demostrate the usage of each function insi
 .<br />
 ├── data_analyses<br />
 ├── flask_monodb<br />
-│   ├── address_book.py<br />
-│   ├── Mongo.docx<br />
-│   ├── Mongo-Troubleshooting_original.py<br />
-│   ├── Mongo-Troubleshooting.py<br />
-│   ├── README.md<br />
-│   ├── README.me<br />
-│   └── requirements.txt<br />
+│    ├── app<br />
+│    │   ├── app.py<br />
+│    │   ├── Flask-Troubleshooting.py<br />
+│    │   ├── mongo.py<br />
+│    │   ├── Mongo-Troubleshooting_original.py<br />
+│    │   ├── Mongo-Troubleshooting.py<br />
+│    │   ├── __pycache__<br />
+│    │   ├── static<br />
+│    │   ├── templates<br />
+│    │   │   └── index.html<br />
+│    │   └── venv<br />
+│    │   │   └── ...<br />
+│    ├── document<br />
+│    │   ├── Flask.docx<br />
+│    │   └── Mongo.docx<br />
+│    ├── mongo.py -> app/mongo.py<br />
+│    ├── Mongo-Troubleshooting.py -> app/Mongo-Troubleshooting.py<br />
+│    ├── README.md<br />
+│    ├── README.me<br />
+│    └── requirements.txt<br />
 ├── nxapi<br />
 │   ├── labs_byCiscoIncu2019.ipynb<br />
 │   ├── __pycache__<br />
@@ -39,5 +52,5 @@ Each module has an demo() function to demostrate the usage of each function insi
 ├── student_info.json<br />
 └── threads<br />
 
-10 directories, 27 files<br />
+175 directories, 1202 files<br />
 

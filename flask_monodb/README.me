@@ -2,14 +2,31 @@
 The purpose of this module is create a testbranch for query/insert/modify information from mongodb database with pymongo Programming language is Python 3.6.4 :: Anaconda, Inc.
 
 ## Project structure
+
 .<br />
-├── address_book.py<br />
-├── Mongo.docx<br />
-├── Mongo-Troubleshooting_original.py<br />
-├── Mongo-Troubleshooting.py<br />
+├── app<br />
+│   ├── app.py<br />
+│   ├── Flask-Troubleshooting.py<br />
+│   ├── mongo.py<br />
+│   ├── Mongo-Troubleshooting_original.py<br />
+│   ├── Mongo-Troubleshooting.py<br />
+│   ├── __pycache__<br />
+│   ├── static<br />
+│   ├── templates<br />
+│   │   └── index.html<br />
+│   └── venv<br />
+│   │   └── ...<br />
+├── document<br />
+│   ├── Flask.docx<br />
+│   └── Mongo.docx<br />
+├── mongo.py -> app/mongo.py<br />
+├── Mongo-Troubleshooting.py -> app/Mongo-Troubleshooting.py<br />
 ├── README.md<br />
 ├── README.me<br />
 └── requirements.txt<br />
+<br />
+165 directories, 1181 files<br />
+
 
 ## Prequisition
 Run command: pip3 install -r requirments.txt
@@ -17,6 +34,19 @@ Run command: pip3 install -r requirments.txt
 ## Excute Modules
 Run command: python3 \<module name>.py
 
+# document
+  Documentation of the project
+
+## Mongo.docx
+Purpose and requirments for Mongodb part of this module. Reference to Cisco Systems bld.C. Author:Tristan Van Egroo
+
+## Flask.docx
+Purpose and requirments for Flask refactor and functionality part of this module. Reference to Cisco Systems bld.C. Author:Tristan Van Egroo
+# app
+  Flask/Main Application folder
+
+## app.py
+ Main Controller of Flask Framework
 
 ## mongo.py
  Create/modify/query an address book in mongodb
@@ -30,6 +60,3 @@ Author:Tristan Van Egroo
 Fixed version of Mongo-Troubleshooting.py<br />
 Original Author:Tristan Van Egroo<br />
 Debuger: Qi Li<br />
-
-## Mongo.docx
-Purpose and requirments for this module. Reference to Cisco Systems bld.C. Author:Tristan Van Egroo

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
+
+    <title>Address Book Test Branch</title>
+
+
+
+</head>
+<body>
+    {% if entries != None %}
+            <h2>Current Entries in the Database</h2>
+            <table style="width:100%" >
+            <tr>
+                    {% for key in entries[0].keys()%}
+                        <th>{{ key }}</th>
+                    {% endfor %}
+            </tr>
+
+            {% for item in entries%}
+                  <tr>
+                      {% for key in item.keys()%}
+                        <td>{{ item[key] }}</td>
+                      {% endfor %}
+                  </tr>
+            {% endfor %}
+                </table>
+        {% endif %}
+    <form method="post" action="/">
+        <input type="submit" name="generate" value="Generate random Address Book entry">
+        {% if entry != None %}
+            <h2>Inserted Entry</h2>
+            <table style="width:100%" >
+            {% for item in entry%}
+                  <tr>
+                    {% for key in item.keys()%}
+                        <th>{{ key }}</th>
+                    {% endfor %}
+                  </tr>
+
+                  <tr>
+                      {% for key in item.keys()%}
+                        <td>{{ item[key] }}</td>
+                      {% endfor %}
+                  </tr>
+            {% endfor %}
+                </table>
+        {% endif %}
+    </form>
+
+
+
+</body>
+</html>
