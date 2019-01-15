@@ -3,64 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 5px;
-}
-th {
-  text-align: left;
-}
-</style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
 
-    <title>Address Book Test Branch</title>
+        th, td {
+            padding: 5px;
+        }
 
+        th {
+            text-align: left;
+        }
+    </style>
+
+    <title>Address Book Test Banch - Control Panel</title>
 
 
 </head>
 <body>
+<form method="post" action="/">
+
     {% if entries != None %}
-            <h2>Current Entries in the Database</h2>
-            <table style="width:100%" >
+
+        <h2>Current Entries in the Database</h2>
+        <table style="width:100%">
             <tr>
-                    {% for key in entries[0].keys()%}
-                        <th>{{ key }}</th>
-                    {% endfor %}
+
+                {% for title in titles %}
+
+                    <th> {{ title }} </th>
+                {% endfor %}
+                <th>Update</th>
             </tr>
 
-            {% for item in entries%}
-                  <tr>
-                      {% for key in item.keys()%}
-                        <td>{{ item[key] }}</td>
-                      {% endfor %}
-                  </tr>
+
+            {% for item in entries %}
+                <tr>
+                    {% for key in titles %}
+                        {% if key in item.keys() %}
+                            {% if key =='_id' %}
+                                <td><input type="text" name="id_" value={{ item[key] }} readonly></td>
+                            {% else %}
+                                <td><input type="text" name="{{ item['_id'] }}_{{ key }}" value={{ item[key] }}></td>
+                            {% endif %}
+
+
+                        {% else %}
+                             <td><input type="text" name="{{ item['_id'] }}_{{ key }}" value='n/a'></td>
+                        {% endif %}
+
+                    {% endfor %}
+                    <td>
+                        <button type="submit" name="action" value="update_{{ item['_id'] }}"> Update</button>
+                    </td>
+
+
+                </tr>
+
+
+
+
+
             {% endfor %}
-                </table>
-        {% endif %}
-    <form method="post" action="/">
-        <input type="submit" name="generate" value="Generate random Address Book entry">
-        {% if entry != None %}
-            <h2>Inserted Entry</h2>
-            <table style="width:100%" >
-            {% for item in entry%}
-                  <tr>
-                    {% for key in item.keys()%}
+        </table>
+    {% endif %}
+    <h2>Control Panel</h2>
+    <h3>Create entry into address book</h3>
+
+
+    First name: <input type="text" name="FirstName_create" value="First Name"><br>
+    Last name: <input type="text" name="LastName_create" value="Last Name"><br>
+    Email Address: <input type="text" name="Email_create" value="xxx@yyy.zz"><br>
+    Home Phone Number: <input type="text" name="Home_Phone_create" value="Numbers only"><br>
+    Work Phone Number: <input type="text" name="Work_Phone_create" value="Numbers only"><br>
+    <input type="submit" name="action" value="Generate random Address Book entry">
+    <input type="submit" name="action" value="Create Address Book Entry"><br>
+
+    <br>
+    <h3>Delete/List specific entry in address book </h3>
+
+    First name: <input type="text" name="FirstName" value="First Name"><br>
+    Last name: <input type="text" name="LastName" value="Last Name"><br>
+    <input type="submit" name="action" value="Delete Entry">
+    <input type="submit" name="action" value="List Entry">
+
+
+
+    {% if entry != None %}
+        <h2>Result</h2>
+        <table style="width:100%">
+            {% for item in entry %}
+                <tr>
+                    {% for key in item.keys() %}
                         <th>{{ key }}</th>
                     {% endfor %}
-                  </tr>
+                </tr>
 
-                  <tr>
-                      {% for key in item.keys()%}
+                <tr>
+                    {% for key in item.keys() %}
                         <td>{{ item[key] }}</td>
-                      {% endfor %}
-                  </tr>
-            {% endfor %}
-                </table>
-        {% endif %}
-    </form>
+                    {% endfor %}
+                </tr>
 
+
+
+
+            {% endfor %}
+
+        </table>
+    {% endif %}
+
+</form>
 
 
 </body>

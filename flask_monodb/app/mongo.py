@@ -16,6 +16,9 @@ import string
 
 
 #mongodb initialization
+from bson import ObjectId
+
+
 def init(ip="localhost",port=27017,database_name="test",collec="incubator"):
     address="mongodb://"+ip+":"+str(port)+"/"
     myclient = pymongo.MongoClient(address)
@@ -39,11 +42,15 @@ def demo():
     print('inserting random sample')
     id = insert_new_entry(example_generator())
     print('insertion item has new id: ' + str(id))
-    #delete
+    #display
     entries =display_entries()
-    result=delete_entries(entries[0]['First Name'], entries[0]['Last Name'])
-    if result==1:
-        print('Entries successfully removed from the database')
+    #delete
+    print('Remove specific entries. ')
+    (id,result)=delete_entries(entries[0]['First Name'], entries[0]['Last Name'])
+    if id!=0:
+        print('Entries successfully removed from the database. Deleted following entries:')
+        for item in result:
+            print(item)
     else:
         print("Something wrong delete failed")
     #show all entries
@@ -58,8 +65,16 @@ def demo():
     entries = display_entries(entries_1[0]['First Name'],entries_1[0]['Last Name'])
     for entrie in entries:
         print(entrie)
-    print('Remove all entries')
-    delete_entries()
+    print('Remove all entries. ')
+    #delete all
+    (id, result)=delete_entries()
+    if id!=0:
+        print('All Entries successfully removed from the database. Deleted following entries:')
+        for item in result:
+            print(item)
+    else:
+        print("Something wrong delete failed. Errorcode:")
+        print(id)
     return
 
 
@@ -69,22 +84,21 @@ def dict(first_name,last_name,*email,**phone):
 
     if len(email) >1:
         raise Exception('dict() function cotain too many parameter. The function suppose to be used as <dict(first name, last name,email(optional),home or/and work phone numer>')
-
-    if len(email) != 0:
+    if len(email) != 0 and email[0] !='n/a':
         dict["Email address"]=email[0]
 
     if 'home_phone'in phone:
         home_phone=phone['home_phone']
-        dict["Home Phone Number"]=home_phone
+        if home_phone!='n/a':
+            dict["Home Phone Number"]=home_phone
     if 'work_phone' in phone:
         work_phone=phone['work_phone']
-        dict["Work Phone Number"]=work_phone
-
-
+        if work_phone!='n/a':
+            dict["Work Phone Number"]=work_phone
     return dict
 
 #generate example dict
-def example_generator(*all):
+def example_generator():
     first_name=names.get_first_name()
     last_name=names.get_last_name()
     email=first_name+'_'+last_name+'@'+''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))+'.se'
@@ -93,8 +107,6 @@ def example_generator(*all):
     dictionary={}
     email_choice=random.randint(0,1)
     phone_choice=random.randint(0,2)
-    if(all==1):
-        phone_choice=2
     if email_choice==0:
         if phone_choice==0:
             dictionary = dict(first_name, last_name, home_phone=home_phone)
@@ -115,13 +127,21 @@ def example_generator(*all):
 
 
 #insert new entry. if exist update base on names
-def insert_new_entry(dict:dict):
-    id =0
+def insert_new_entry(dict:dict,*id):
     first_name=dict.get('First Name')
     last_name=dict.get('Last Name')
 
-    result=collection.find({"$and": [{"First Name": first_name},
+    if len(id) >1:
+        raise Exception('insert_new_entry() function cotain too many parameter. Only one id allowed')
+    if len(id) == 1:
+        result = collection.find({"$and": [{"_id": ObjectId(id[0])}]})
+
+    else:
+        id=0
+        result=collection.find({"$and": [{"First Name": first_name},
                           {"Last Name": last_name}]})
+
+
     if result.count() == 0:
         item=collection.insert_one(dict)
         id =item.inserted_id
@@ -142,20 +162,22 @@ def display_entries(firstname=None,lastname=None):
         result = collection.find({"$and": [{"First Name": firstname},
                                        {"Last Name": lastname}]}).sort([("First Name",pymongo.ASCENDING),("Last Name",pymongo.ASCENDING)])
     output=[]
-
     for item in result:
+            item['_id']=str(item['_id'])
             output.append(item)
     return output
 
 #delete specific or all entries
 def delete_entries(firstname=None,lastname=None):
-    result=None
+    result=0
+    item=display_entries()
     if firstname ==None and lastname ==None:
         result=collection.delete_many({})
     else:
+        item =display_entries(firstname,lastname)
         result = collection.delete_many({"$and": [{"First Name": firstname},
                                        {"Last Name": lastname}]})
-    return result.deleted_count
+    return (result.deleted_count,item)
 
 
 
