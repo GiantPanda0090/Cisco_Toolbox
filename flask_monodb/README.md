@@ -1,4 +1,4 @@
-# **Pymongo Test Branch**
+# **Pymongo/Flask Test Banch**
 The purpose of this module is create a testbranch for query/insert/modify information from mongodb database with pymongo Programming language is Python 3.6.4 :: Anaconda, Inc.
 
 ## Project structure
@@ -32,8 +32,14 @@ The purpose of this module is create a testbranch for query/insert/modify inform
 ## Prequisition
 Run command: pip3 install -r requirments.txt 
 
-## Excute Modules
+## Excute Modules (.py file)
 Run command: python3 \<module name>.py
+
+## Excute Modules (Flask)
+Run command to start local development server: flask run 
+Access address to open Control Panel in develpment server:`http://localhost:5000/`
+Query external RestAPI under development server: `http://localhost:5000/api/v1.0/<request>`
+
 
 # document
   Documentation of the project
