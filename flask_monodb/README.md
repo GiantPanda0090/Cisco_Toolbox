@@ -71,18 +71,23 @@ Original Author:Tristan Van Egroo<br />
 Debuger: Qi Li<br />
 
 
-#RestAPI documentation
+# RestAPI documentation
 Documentation for RestAPI usage in app.py. The API is used as `http://<address of the Rest server>:<port>/<address that stated below>'`
-##Get all entries
+
+## Get all entries
 `'/api/v1.0/entries'`, methods:'GET'<br />
-##List specific entry base on first and last name
+
+## List specific entry base on first and last name
 `'/api/v1.0/entry/<string:first_name>/<string:last_name>'`, methods:'GET'<br />
-##List specific entry base on Objectid
+
+## List specific entry base on Objectid
 `'/api/v1.0/entry/<string:id>'`, methods:'GET'<br />'
-##Update specific/multiple data in specific entry
+
+## Update specific/multiple data in specific entry
 `'/api/v1.0/entry/<string:id>'`, methods:'PUT'<br />
 Data injection should be under headers as parameter.<br />
 key allowed:'Ad-First-Name','Ad-Last-Name','Ad-Email-Address','Ad-Home-Phone','Ad-Work-Phone'<br />
+
 ## add a new entry into the databsae
 `'/api/v1.0/entry'`, methods:'POST'
 ## delete one entry in the database base on first and last name
