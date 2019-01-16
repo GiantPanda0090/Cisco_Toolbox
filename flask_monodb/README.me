@@ -6,6 +6,7 @@ The purpose of this module is create a testbranch for query/insert/modify inform
 .<br />
 ├── app<br />
 │   ├── app.py<br />
+│   ├── Flask-Troubleshooting_original.py<br />
 │   ├── Flask-Troubleshooting.py<br />
 │   ├── mongo.py<br />
 │   ├── Mongo-Troubleshooting_original.py<br />
@@ -51,12 +52,38 @@ Purpose and requirments for Flask refactor and functionality part of this module
 ## mongo.py
  Create/modify/query an address book in mongodb
 
-##  Mongo-Troubleshooting.py
-Code that has issue that need to be fixed. Fixed version are in Mongo-Troubleshooting_original.py <br />
+## Flask-Troubleshooting_original.py
+Code that has issue that need to be fixed. Fixed version are in Flask-Troubleshooting.py <br />
 Author:Tristan Van Egroo
 
-
-## Mongo-Troubleshooting_original.py
-Fixed version of Mongo-Troubleshooting.py<br />
+## Flask-Troubleshooting.py
+Fixed version of Flask-Troubleshooting_original.py<br />
 Original Author:Tristan Van Egroo<br />
 Debuger: Qi Li<br />
+
+## Mongo-Troubleshooting_original.py
+Code that has issue that need to be fixed. Fixed version are in Mongo-Troubleshooting_original.py <br />
+Author:Tristan Van Egroo <br />
+
+##  Mongo-Troubleshooting.py
+Fixed version of Mongo-Troubleshooting_original.py<br />
+Original Author:Tristan Van Egroo<br />
+Debuger: Qi Li<br />
+
+
+#RestAPI documentation
+Documentation for RestAPI usage in app.py. The API is used as `http://<address of the Rest server>:<port>/<address that stated below>'`
+##Get all entries
+`'/api/v1.0/entries'`, methods:'GET'<br />
+##List specific entry base on first and last name
+`'/api/v1.0/entry/<string:first_name>/<string:last_name>'`, methods:'GET'<br />
+##List specific entry base on Objectid
+`'/api/v1.0/entry/<string:id>'`, methods:'GET'<br />'
+##Update specific/multiple data in specific entry
+`'/api/v1.0/entry/<string:id>'`, methods:'PUT'<br />
+Data injection should be under headers as parameter.<br />
+key allowed:'Ad-First-Name','Ad-Last-Name','Ad-Email-Address','Ad-Home-Phone','Ad-Work-Phone'<br />
+## add a new entry into the databsae
+`'/api/v1.0/entry'`, methods:'POST'
+## delete one entry in the database base on first and last name
+`'/api/v1.0/entry/<string:first_name>/<string:last_name>'`, methods:'DELETE'

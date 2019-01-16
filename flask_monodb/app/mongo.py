@@ -18,7 +18,7 @@ import string
 #mongodb initialization
 from bson import ObjectId
 
-
+#initialization function. change ip and port base on the address of the mongodb database
 def init(ip="localhost",port=27017,database_name="test",collec="incubator"):
     address="mongodb://"+ip+":"+str(port)+"/"
     myclient = pymongo.MongoClient(address)
@@ -80,21 +80,29 @@ def demo():
 
 #create dictionary
 def dict(first_name,last_name,*email,**phone):
-    dict={"First Name":first_name,"Last Name":last_name}
+    if first_name=='n/a' or len(str(first_name))==0 or last_name=='n/a' or len(str(last_name))==0:
+        raise Exception('First Name and Last Name must both be presented!The entry is not created!')
+    else:
+        dict={"First Name":first_name,"Last Name":last_name}
 
     if len(email) >1:
         raise Exception('dict() function cotain too many parameter. The function suppose to be used as <dict(first name, last name,email(optional),home or/and work phone numer>')
     if len(email) != 0 and email[0] !='n/a':
         dict["Email address"]=email[0]
 
+    phone_accept_flag=False
     if 'home_phone'in phone:
         home_phone=phone['home_phone']
         if home_phone!='n/a':
             dict["Home Phone Number"]=home_phone
+            phone_accept_flag = True
     if 'work_phone' in phone:
         work_phone=phone['work_phone']
         if work_phone!='n/a':
             dict["Work Phone Number"]=work_phone
+            phone_accept_flag = True
+    if phone_accept_flag == False:
+        raise Exception('At lease one phone number has to be presented! The entry is not created!')
     return dict
 
 #generate example dict

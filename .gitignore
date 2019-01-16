@@ -121,4 +121,7 @@ flask_monodb/flask_monodb_2/*
 
 #idea
 .idea/*
+*/.idea/*
+.idea/
+
 

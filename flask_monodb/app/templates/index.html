@@ -50,7 +50,7 @@
 
 
                         {% else %}
-                             <td><input type="text" name="{{ item['_id'] }}_{{ key }}" value='n/a'></td>
+                            <td><input type="text" name="{{ item['_id'] }}_{{ key }}" value='n/a'></td>
                         {% endif %}
 
                     {% endfor %}
@@ -92,6 +92,8 @@
 
     {% if entry != None %}
         <h2>Result</h2>
+        <h3 style="color: #9C1A1C">{{ error }}</h3>
+
         <table style="width:100%">
             {% for item in entry %}
                 <tr>

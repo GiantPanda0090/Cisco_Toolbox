@@ -26,11 +26,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Flask-Troubleshooting.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../app/Flask-Troubleshooting.py">
+      <file leaf-file-name="Mongo-Troubleshooting_original.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/Mongo-Troubleshooting_original.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Flask-Troubleshooting_original.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/Flask-Troubleshooting_original.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="80" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -38,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mongo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../app/mongo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="136" column="29" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="20" column="80" lean-forward="false" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
               <folding>
                 <element signature="e#2#16#0" expanded="true" />
               </folding>
@@ -50,14 +62,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="58" column="12" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+            <state relative-caret-position="3708">
+              <caret line="206" column="18" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="207" selection-end-column="88" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#297#355#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Flask-Troubleshooting.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/Flask-Troubleshooting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,10 +87,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="80" column="71" lean-forward="false" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="71" />
+            <state relative-caret-position="1818">
+              <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -98,6 +121,7 @@
       <find>&quot;id</find>
       <find>id</find>
       <find>n/a</find>
+      <find>'n/a'</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -105,9 +129,12 @@
       <list>
         <option value="$PROJECT_DIR$/flask_monodb_2.py" />
         <option value="$PROJECT_DIR$/../flask_monodb/templates/index.html" />
-        <option value="$PROJECT_DIR$/../app/mongo.py" />
-        <option value="$PROJECT_DIR$/../app/templates/index.html" />
+        <option value="$PROJECT_DIR$/../app/tshoot.py" />
         <option value="$PROJECT_DIR$/../app/app.py" />
+        <option value="$PROJECT_DIR$/../app/templates/index.html" />
+        <option value="$PROJECT_DIR$/../app/Flask-Troubleshooting_original.py" />
+        <option value="$PROJECT_DIR$/../app/Flask-Troubleshooting.py" />
+        <option value="$PROJECT_DIR$/../app/mongo.py" />
       </list>
     </option>
   </component>
@@ -170,6 +197,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../app/app.py" />
     <property name="SearchEverywhereHistoryKey" value="term&#9;ACTION&#9;ActivateTerminalToolWindow" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../app" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -417,6 +449,46 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="494" column="22" lean-forward="false" selection-start-line="494" selection-start-column="22" selection-end-line="494" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1818">
+          <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/Flask-Troubleshooting_original.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/Mongo-Troubleshooting_original.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../app/Mongo-Troubleshooting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -427,51 +499,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/web-forms.rnc">
+    <entry file="file://$PROJECT_DIR$/../app/Flask-Troubleshooting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="494" column="22" lean-forward="false" selection-start-line="494" selection-start-column="22" selection-end-line="494" selection-end-column="22" />
+        <state relative-caret-position="36">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../app/Flask-Troubleshooting.py">
+    <entry file="file://$PROJECT_DIR$/../app/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="3708">
+          <caret line="206" column="18" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="207" selection-end-column="88" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#297#355#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../app/mongo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="136" column="29" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="20" column="80" lean-forward="false" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
           <folding>
             <element signature="e#2#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="80" column="71" lean-forward="false" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../app/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="58" column="12" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>

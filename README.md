@@ -7,6 +7,7 @@ Each module has an demo() function to demostrate the usage of each function insi
 ├── flask_monodb<br />
 │    ├── app<br />
 │    │   ├── app.py<br />
+│    │   ├── Flask-Troubleshooting_original.py<br />
 │    │   ├── Flask-Troubleshooting.py<br />
 │    │   ├── mongo.py<br />
 │    │   ├── Mongo-Troubleshooting_original.py<br />
@@ -16,7 +17,7 @@ Each module has an demo() function to demostrate the usage of each function insi
 │    │   ├── templates<br />
 │    │   │   └── index.html<br />
 │    │   └── venv<br />
-│    │   │   └── ...<br />
+│    │        └── ...<br />
 │    ├── document<br />
 │    │   ├── Flask.docx<br />
 │    │   └── Mongo.docx<br />
@@ -35,7 +36,6 @@ Each module has an demo() function to demostrate the usage of each function insi
 │       ├── _init_.py<br />
 │       ├── nxostoolkit.py<br />
 │       └── __pycache__<br />
-│           └── config.cpython-36.pyc<br />
 ├── production.sh<br />
 ├── regex<br />
 │   ├── demo_find_src_types.txt<br />
@@ -52,5 +52,5 @@ Each module has an demo() function to demostrate the usage of each function insi
 ├── student_info.json<br />
 └── threads<br />
 
-175 directories, 1202 files<br />
+242 directories, 2007 files<br />
 
